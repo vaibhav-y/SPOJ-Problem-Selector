@@ -44,7 +44,7 @@ Usage
 
 + spojuserdatagetter.py gets the activity of one user!
 
-*spojprobchooser.py uses an exponential difficulty mapping system, to emphasis, large differences, among higher ranks properly.
++ spojprobchooser.py uses an exponential difficulty mapping system, to emphasis, large differences, among higher ranks properly.
 
 ***
 
