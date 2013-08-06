@@ -21,12 +21,15 @@ Usage
 >Here's some quick screenshoots using IDLE (Because cmd is too bland :) )
 
 1. Run Module
+
 ![alt-text][img1]
 
 2. Choose an appropriate option
+
 ![alt-text][img2]
 
 3. Get set, go!
+
 ![alt-text][img3]
 
 [img1]: http://i.imgur.com/0idMuY6.png "Input username"
