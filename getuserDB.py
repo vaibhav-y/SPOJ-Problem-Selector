@@ -33,7 +33,7 @@ def ranker():
   userno=0
   breaker=0
   while 1==1:
-   url="http://www.spoj.pl/ranks/users/start="+str(max(0,len(USERS)))
+   url="http://www.spoj.com/ranks/users/start="+str(max(0,len(USERS)))
    urlpage=urllib.urlopen(url).read().split('\n')
    for line in urlpage:
        if "/users/" in line:

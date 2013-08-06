@@ -30,7 +30,7 @@ def getspojDB():
    cur=-50
    while 1==1:
      cur=cur+50
-     url="http://www.spoj.pl/problems/classical/sort=0,start="+str(cur);
+     url="http://www.spoj.com/problems/classical/sort=0,start="+str(cur);
      page=urllib.urlopen(url)
      addval=0
      for line in page.read().split('\n'):
@@ -75,4 +75,4 @@ if(__name__=="__main__"):
    phyfile.close()  
    print "Getting SPOJ Classifier list"
    os.system("rm -rf SPOJCLASS")
-   os.system("wget http://web.iiit.ac.in/~srinivasan.l/extras/SPOJCLASS")
+   os.system("wget http://s-ln.in/extras/spojps/SPOJCLASS")

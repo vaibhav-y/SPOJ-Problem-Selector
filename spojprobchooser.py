@@ -66,7 +66,7 @@ def funtosolve(PROBS,minormax):
          return THECHOSENONEMAX,SELECTEDMIN
       
 def difficultybased(PROBS):
-    print "Enter your desired difficulty level(0-100)"
+    print "Enter your desired difficulty level(0-100). "
     LEVEL=float(raw_input())
     items=PROBLIST.items()
     items=[(float(value),key) for key,value in items]
@@ -98,8 +98,9 @@ def difficultybased(PROBS):
            THECHOSENACC=item3[i] 
     return THECHOSENONE,SELECTEDONES
 def main():
-    global DIFFICULTYLEVEL
+    global DIFFICULTYLEVEL, PROBCOUNT
     DIFFICULTYLEVEL=0
+    PROBCOUNT=0
     print "Enter you SPOJ username:"
     username=raw_input()
     print "Getting your solved problem list"
@@ -138,10 +139,22 @@ def main():
                    TAGLIST[tag]=TAGLIST[tag]+1
     for prob in PROBS:
        if prob in SPOJDIFF:
-        DIFFICULTYLEVEL=(DIFFICULTYLEVEL+(PROBS[prob]-float(SPOJDIFF[prob])))/2.0
+            DIFFICULTYLEVEL+= float(SPOJDIFF[prob]) - PROBS[prob]
+            #print "difficultyLevel:", DIFFICULTYLEVEL
+            #print "PROBDATA:", PROBS[prob]
+            #print "SPOJDIFF_DATA:", float(SPOJDIFF[prob])
+            PROBCOUNT = PROBCOUNT + 1
+    DIFFICULTYLEVEL =  DIFFICULTYLEVEL/(PROBCOUNT + 1)
+    if DIFFICULTYLEVEL == 0:
+        print "You have not attempted any problems yet. Try this one: http://www.spoj.com/TEST"
     while 1==1:
-     print "Your Difficulty Level:",DIFFICULTYLEVEL
-     print "If difficulty level is 0, you are average, if its less than 0 , you are above average  and its greater than 0 , you are below average!"
+     print "Your Difficulty Level:", math.pow(2, DIFFICULTYLEVEL)
+     print "You've solved "+str(PROBCOUNT)+" problems, challenge and classical inclusive!"
+     print "Fun facts:"
+     print "You start out with a difficulty level of 1"
+     print "Scores more than 1 indicate that you are above average, while scores below 1 suggest that you are below average"
+     print "Happy Tree Friends is a cool show."
+     print "Choose from the following:"
      print "1) Pick A Fun to Solve problem"
      print "2) Pick A Problem to improve my weakness"
      print "3) Pick Problem Based on Difficulty Level"
@@ -158,10 +171,10 @@ def main():
         CHOSEN,SELECTED=difficultybased(PROBS)
      else:
         break
-     print "\n\n\nWe found the best match ! Please try the problem at this url","http://www.spoj.pl/problems/"+CHOSEN+"/"
+     print "\n\n\nWe found the best match ! Please try the problem at this url","http://www.spoj.com/problems/"+CHOSEN+"/"
      print "You can also try these"
      for i in range(min(5,len(SELECTED))):
-        print "http://www.spoj.pl/problems/"+SELECTED[i]+"/"
+        print "http://www.spoj.com/problems/"+SELECTED[i]+"/"
      print "\n\n\n"
 if __name__ == '__main__':
     main()

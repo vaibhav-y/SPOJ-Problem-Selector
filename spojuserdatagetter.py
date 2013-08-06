@@ -5,7 +5,7 @@ import string
 import re
 import getspojDB
 def getter(username):
-  url="http://www.spoj.pl/status/"+username+"/signedlist/"
+  url="http://www.spoj.com/status/"+username+"/signedlist/"
   print "Fetching data"
   userpage=urllib.urlopen(url).read().split('\n')
   ACCED={}
