@@ -52,5 +52,5 @@ Usage
 
 1. Refactor into various modules
 2. Revise the scoring system further
-3. 
+3. Improve readability
 4. Equivalent Ruby fork?
