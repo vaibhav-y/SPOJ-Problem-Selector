@@ -20,15 +20,15 @@ Usage
 
 >Here's some quick screenshoots using IDLE (Because cmd is too bland :) )
 
-1. Run Module
+Run Module
 
 ![alt-text][img1]
 
-2. Choose an appropriate option
+Choose an appropriate option
 
 ![alt-text][img2]
 
-3. Get set, go!
+Get set, go!
 
 ![alt-text][img3]
 
