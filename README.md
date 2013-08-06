@@ -1,6 +1,6 @@
 SPOJ-Problem-Selector
 ======
-_Ever had problem selecting which problem to do on SPOJ?_
+_Ever had trouble selecting which problem to do on SPOJ?_
 
 It just got solved, as easy as 1, 2, 3!
 
@@ -18,7 +18,7 @@ Usage
 
 >Using IDLE or any other IDE on Windows should be fine too
 
->Here's some quick screenshoots using IDLE (Because cmd is too bland :) )
+>Here's some quick screenshots using IDLE (Because cmd is too bland :) )
 
 Run Module
 
