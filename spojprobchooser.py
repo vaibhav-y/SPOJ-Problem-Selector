@@ -139,16 +139,16 @@ def main():
                    TAGLIST[tag]=TAGLIST[tag]+1
     for prob in PROBS:
        if prob in SPOJDIFF:
-            DIFFICULTYLEVEL+= PROBS[prob]/((1.0 + float(SPOJDIFF[prob]))**2)
+            DIFFICULTYLEVEL+= float(SPOJDIFF[prob]) - PROBS[prob]
             #print "difficultyLevel:", DIFFICULTYLEVEL
             #print "PROBDATA:", PROBS[prob]
             #print "SPOJDIFF_DATA:", float(SPOJDIFF[prob])
             PROBCOUNT = PROBCOUNT + 1
-    DIFFICULTYLEVEL =  (PROBCOUNT + 1)/(DIFFICULTYLEVEL + 1)
+    DIFFICULTYLEVEL =  DIFFICULTYLEVEL/(PROBCOUNT + 1)
     if DIFFICULTYLEVEL == 0:
         print "You have not attempted any problems yet. Try this one: http://www.spoj.com/TEST"
     while 1==1:
-     print "Your Difficulty Level:", math.pow(2, DIFFICULTYLEVEL - 1)
+     print "Your Difficulty Level:", math.pow(2, DIFFICULTYLEVEL)
      print "You've solved "+str(PROBCOUNT)+" problems, challenge and classical inclusive!"
      print "Fun facts:"
      print "You start out with a difficulty level of 1"
